@@ -4,8 +4,11 @@ import '../components/Login.css'
 import Image1 from "../Images/image 6.png"
 import { useNavigate, useParams } from 'react-router-dom'
 import M from 'materialize-css'
-import { GoogleLogin } from '@react-oauth/google';
-import { GoogleOAuthProvider } from '@react-oauth/google'
+import { FcGoogle } from "react-icons/fc";
+import { ImGithub } from "react-icons/im";
+import { Link } from 'react-router-dom'
+
+
 
 const Login = () => {
     const navigate = useNavigate()
@@ -13,6 +16,8 @@ const Login = () => {
     const [email, setEmail] = useState("")
     const { firstName, lastName } = useParams();
 
+
+    // Redirect the user to the authorization URL
 
 
     const PostData = () => {
@@ -91,7 +96,36 @@ const Login = () => {
                     >Button</button>
                 </div>
                 <h5 style={{ marginTop: '1rem', color: 'grey' }}>OR</h5>
-                
+                <div className="s-social-btn">
+                    <button className='s-button'
+                        onClick={() => {
+                            const clientId = '629893813264-9v3k77joudcb57gt87jd3e91d2im1r1d.apps.googleusercontent.com';
+                            const redirectUri = 'http://localhost:3000/page1';
+                            // Redirect the user to the authorization URL
+                            const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email%20profile`;
+
+                            window.location.href = authUrl;
+                        }}
+                    >
+                        <FcGoogle className="icon" /> Sign In with Google
+                    </button>
+                    <button
+                      className="s-button"
+                      onClick={() => {
+                        const clientId = '276e38caea4c1ab0378b';
+                            const redirectUri = 'http://localhost:3000/page1';
+                            // Redirect the user to the authorization URL
+                            const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email%20profile`;
+
+                            window.location.href = authUrl;
+                      }}
+                    >
+                      <ImGithub className="icon" /> Sign In with Github
+                    </button>
+                </div>
+                <p style={{marginTop:'1rem',textAlign:'center'}}>
+                  Don't have an account? <Link to="/signup">SignUp</Link>
+                </p>
             </div>
 
         </>

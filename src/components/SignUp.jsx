@@ -4,6 +4,9 @@ import '../components/SignUp.css';
 import Image1 from '../Images/image 6.png';
 import { useNavigate } from 'react-router-dom';
 import M from 'materialize-css';
+import { FcGoogle } from "react-icons/fc";
+import { ImGithub } from "react-icons/im";
+import { Link } from 'react-router-dom'
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -43,7 +46,7 @@ const SignUp = () => {
       }),
     })
       .then((res) => res.json())
-    
+
       .then((data) => {
         console.log(data);
         if (data.error) {
@@ -144,7 +147,39 @@ const SignUp = () => {
           </button>
         </div>
         <h5 style={{ marginTop: '1rem', color: 'grey' }}>OR</h5>
+        <div className="s-social-btn">
+        <button className='s-button'
+          onClick={() => {
+            const clientId = '629893813264-9v3k77joudcb57gt87jd3e91d2im1r1d.apps.googleusercontent.com';
+            const redirectUri = 'http://localhost:3000/page1';
+            // Redirect the user to the authorization URL
+            const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email%20profile`;
+
+            window.location.href = authUrl;
+          }}
+        >
+          <FcGoogle className="icon" /> Sign Up with Google
+        </button>
+        <button
+          className="s-button"
+          onClick={() => {
+            const clientId = '276e38caea4c1ab0378b';
+            const redirectUri = 'http://localhost:3000/page1';
+            // Redirect the user to the authorization URL
+            const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email%20profile`;
+
+            window.location.href = authUrl;
+          }}
+        >
+          <ImGithub className="icon" /> Sign Up with Github
+        </button>
       </div>
+      <p style={{ marginTop: '1rem', textAlign: 'center' }}>
+        Already have an account ? <Link to="/login">SignIn</Link>
+      </p>
+      </div>
+      
+
     </>
   );
 };

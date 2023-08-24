@@ -16,3 +16,16 @@
 #edit h5{
     text-align: center;
 }
+.s-button{
+    padding: 0.4em;
+    background-color: white;
+    width: 250px;
+    margin-right: 10px;
+}
+.s-social-btn{
+    display: flex;
+    flex-direction: row;
+    margin-left: -1rem;
+    font-size: 15px;
+    }
+    

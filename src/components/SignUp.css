@@ -17,3 +17,15 @@
 #edit h5{
     text-align: center;
 }
+.s-button{
+    width: 200px;
+    background-color: white;
+    padding: 0.5em;
+}
+.s-social-btn{
+    display: flex;
+    flex-direction: row;
+    
+    font-size: 14px;
+    }
+    
