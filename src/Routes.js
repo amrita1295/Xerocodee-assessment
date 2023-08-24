@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login from './components/Login';
-import SignUp from "./components/SignUp";
-import Page1 from "./components/Pages/Page1";
-import Hosting from "./components/Pages/Hosting";
-import SelfHosting from "./components/Pages/SelfHosting"
-import GitHub from "./components/Pages/GitHub"
+import Login from './components/Login/Login';
+import SignUp from "./components/SignUp/SignUp";
+import Page1 from "./components/Pages/Organisation/Page1";
+import Hosting from "./components/Pages/Hosting/Hosting";
+import SelfHosting from "./components/Pages/Selfhosting/SelfHosting";
+import GitHub from "./components/Pages/Github/GitHub"
 
 
 const router = createBrowserRouter([

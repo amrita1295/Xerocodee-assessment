@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Logo from '../Images/logo 4.png';
-import '../components/SignUp.css';
-import Image1 from '../Images/image 6.png';
+import Logo from '../../Images/logo 4.png';
+import '../../components/SignUp/SignUp.css';
+import Image1 from '../../Images/image 6.png';
 import { useNavigate } from 'react-router-dom';
 import M from 'materialize-css';
 import { FcGoogle } from "react-icons/fc";

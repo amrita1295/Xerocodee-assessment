@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Logo from "../../Images/logo 4.png"
-import "./Hosting.css"
+import Logo from "../../../Images/logo 4.png"
+import "./../Hosting/Hosting.css"
 import { Link } from 'react-router-dom'
 
 const Hosting = () => {

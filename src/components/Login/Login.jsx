@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Logo from '../Images/logo 4.png'
-import '../components/Login.css'
-import Image1 from "../Images/image 6.png"
+import Logo from '../../Images/logo 4.png'
+import '../../components/Login/Login.css'
+import Image1 from "../../Images/image 6.png"
 import { useNavigate, useParams } from 'react-router-dom'
 import M from 'materialize-css'
 import { FcGoogle } from "react-icons/fc";

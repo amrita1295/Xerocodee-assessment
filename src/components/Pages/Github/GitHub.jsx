@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Logo from "../../Images/logo 4.png";
-import "./GitHub.css";
+import Logo from "../../../Images/logo 4.png";
+import "./../Github/GitHub.css";
 import { useParams} from 'react-router-dom'; 
 
 const GitHub = () => {
