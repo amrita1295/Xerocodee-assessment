@@ -1,0 +1,19 @@
+.container{
+    margin-left: 7em;
+    margin-top: 5rem;
+    
+}
+
+.picture{
+    float: right;
+    margin-right: 5rem;
+    margin-top: -2rem;
+}
+
+#edit{
+    margin-top: 5rem;
+    margin-left: 18rem;
+}
+#edit h5{
+    text-align: center;
+}
