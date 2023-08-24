@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Logo from "../../Images/logo 4.png"
 import "./Hosting.css"
 import { Link } from 'react-router-dom'
+
 const Hosting = () => {
+    const [selectedTab, setSelectedTab] = useState("selfhosting"); // Initialize with the ID of the first tab
+
     return (
         <>
             <div className='container'>
@@ -12,16 +15,14 @@ const Hosting = () => {
                 <div>
                     <div className='l-1'>
                         <h2
-                            style=
-                            {{
+                            style={{
                                 fontWeight: 'normal',
                                 fontSize: '30px'
                             }}>
                             Welcome
                         </h2>
                         <h4
-                            style=
-                            {{
+                            style={{
                                 color: 'gray',
                                 fontSize: '20px'
                             }}>
@@ -31,20 +32,23 @@ const Hosting = () => {
                 </div>
             </div>
             <div className='flex-row'>
-                <div className='box'>
-                    <Link to="/selfhosting">
+                <div className={`box ${selectedTab === "selfhosting" ? "selected" : ""}`}>
+                    <Link to="/selfhosting" onClick={() => setSelectedTab("selfhosting")} className='link'>
                         <h3>
                             Self Hosting
                         </h3>
                     </Link>
                 </div>
-                <div className='box'>
-                    <h3>XeroCodee Hosting</h3>
+                <div className={`box ${selectedTab === "xerocodee" ? "selected" : ""}`}onClick={() => setSelectedTab("xerocodee")}>
+               
+                    <h3>
+                        XeroCodee Hosting
+                    </h3>
+                   
                 </div>
             </div>
-
         </>
     )
 }
 
-export default Hosting
+export default Hosting;

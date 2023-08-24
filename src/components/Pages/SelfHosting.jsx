@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Logo from "../../Images/logo 4.png";
-import "./Hosting.css";
+import "./SelfHosting.css";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 

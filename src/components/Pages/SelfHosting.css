@@ -30,3 +30,25 @@ input{
     width: 120px;
     border-radius: 5px;
 }
+.box h3{
+    font-size: 20px;
+    
+}
+.selected{
+    background-color: rgb(5, 5, 247);
+    color: white;
+
+}
+.box:hover{
+    background-color: blue;
+    color: white;
+    
+}
+.link:hover{
+    color: white;
+    
+}
+.link{
+    text-decoration: none;
+    color: black;
+}

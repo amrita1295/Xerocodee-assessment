@@ -43,12 +43,16 @@ const GitHub = () => {
         </div>
       </div>
       <div className="form-outline" id="box">
-        <h1>GitHub Repositories for {inputValue}</h1>
+        <h1 style={{fontSize:'25px'}}>GitHub Repositories for {inputValue}</h1>
+        {repos.length>0?(
         <ul>
           {repos.map((repo) => (
             <li key={repo.id}>{repo.name}</li>
           ))}
         </ul>
+        ):(
+        <p style={{fontSize:'40px',textAlign:'center',fontFamily:'cursive'}}>No data found</p>
+        )}
       </div>
     </>
   );
