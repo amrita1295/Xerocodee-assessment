@@ -16,6 +16,8 @@ npm install
 ```sh
 npm run start
 ```
+## Link
+[Demo](https://github.com/amrita1295/Xerocodee-assessment/assets/56605853/d45561e4-c51b-4cd5-82db-ca238a5ae407)
 
 ## Run tests
 
